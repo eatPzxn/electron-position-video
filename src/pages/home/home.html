@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="home.css">
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+  <div class="warp">
     <div class="contain">
-      <div class="drag-box"></div>
+      <div class="drag-box">
+        <!-- <div id="close" class="close"></div> -->
+      </div>
       <div class="contain-child one"></div>
       <div class="contain-child two"></div>
       <div class="contain-child three"></div>
       <div class="contain-child four"></div>
       <div class="contain-child five"></div>
-      <div class="close"></div>
     </div>
-    <div class="model">
-      <div class="model-inner">
-        <video class="model-inner-video" autoplay loop src="../../assets/video/one.mp4"></video>
-      </div>
+  </div>
+  <div id="my-model" class="model">
+    <div class="model-background"></div>
+    <div id="my-box" class="model-inner">
+      <video id="my-video" class="model-inner-video" autoplay></video>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
 
+<script src="../../util/index.js"></script>
 <script src="home.js"></script>

@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 const path = require('path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -16,11 +16,11 @@ const createWindow = () => {
     width: 1000,
     height: 563,
     frame: false,
-    transparent: true,
-    // fullscreen: true,
+    // transparent: true,
+    fullscreen: true,
     // show: false,
   });
- 
+  // Menu.setApplicationMenu(null)
   // mainWindow.maximize()
   // mainWindow.show()
 
@@ -28,7 +28,7 @@ const createWindow = () => {
   mainWindow.loadFile(path.join(__dirname, './pages/home/home.html'));
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on('closed', () => {
